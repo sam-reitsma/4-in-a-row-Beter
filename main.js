@@ -128,3 +128,16 @@ function setWinner(r, c) {
     gameOver = true;
 }
  
+$("#restart").click(function(){
+    clearBoard();
+});
+
+function clearBoard(){
+    $(".cell").each(function(){
+        $(this).attr("data-player", 0);
+        $(this).css("background-color", "white");
+
+        winner = 0;
+
+    });
+}
